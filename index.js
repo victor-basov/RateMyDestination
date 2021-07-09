@@ -5,7 +5,8 @@ const app = express();
 const pinRoute = require("./routes/pins");
 const userRoute = require("./routes/users");
 
-const port = process.env.PORT || 5000;
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 dotenv.config();
 
@@ -20,9 +21,9 @@ app.use("/api/users", userRoute);
 app.use("/api/pins", pinRoute);
 
 
-app.listen(5000,()=>{
-    console.log("Backend server is running!")
-})
+app.listen(port, host, function() {
+    console.log("Server started.......");
+  });
 
 // ... other imports
 const path = require("path")
