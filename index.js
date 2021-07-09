@@ -6,7 +6,7 @@ const pinRoute = require("./routes/pins");
 const userRoute = require("./routes/users");
 
 const host = '0.0.0.0';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8800;
 
 dotenv.config();
 
