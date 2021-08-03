@@ -20,11 +20,6 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
 app.use("/api/users", userRoute);
 app.use("/api/pins", pinRoute);
 
-
-app.listen(port, host, function() {
-    console.log("Server started.......");
-  });
-
 // ... other imports
 const path = require("path")
 
@@ -36,4 +31,11 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
+
+
+app.listen(port, host, function() {
+    console.log("Server started.......");
+  });
+
+
 

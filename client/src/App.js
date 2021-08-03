@@ -93,7 +93,7 @@ const handleLogout = ()=> {
       onDblClick = {handleAddClick}
       transitionDuration="200"
     >
-      {pins.map(p=>(
+      {pins.map((p) => (
         <>
 
       <Marker latitude= {p.lat}
